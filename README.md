@@ -1,24 +1,8 @@
 # vue_test
 
-## Project setup
+## 天猫超市仿写
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+基本完成
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
