@@ -33,19 +33,19 @@
 				<div class="buyItem" v-for="(b, index) in buyItemValue" :key="b.id+index">
 					<img :src="b.imgsrc" />
 					<div class="itemNumber">
-						<div class="reduce btn" @click="reduce(index)">-</div>
+						<div class="reduce btn" @click="reduceTest(index)">-</div>
 						<input
 							type="text"
 							:value="b.goodsnumber"
 							class="numb"
 							readonly="readonly"
 						/>
-						<div class="plus btn" @click="plus(index)">+</div>
+						<div class="plus btn" @click="plusTest(index)">+</div>
 					</div>
 					<div class="price">
 						${{ (b.goodsnumber * b.goodsprice).toFixed(2) }}
 					</div>
-					<div class="deleteBtn" @click="shanchu(index)">×</div>
+					<div class="deleteBtn" @click="shanchuTest(index)">×</div>
 				</div>
 			</div>
 		</div>
@@ -67,7 +67,15 @@ export default {
 		"shanchu"
 	],
 	methods: {
-		
+		reduceTest(order){
+			this.$bus.$emit('reduce',order);
+		},
+		plusTest(order){
+			this.$bus.$emit('plus',order);
+		},
+		shanchuTest(order){
+			this.$bus.$emit('shanchu',order);
+		}
 	},
 	computed: {
 		totalPrice() {

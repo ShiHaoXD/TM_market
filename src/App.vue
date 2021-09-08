@@ -12,11 +12,8 @@
 		<headerlayout />
 		<Stickyheader
 			:shopCarValue="shopCarValue"
-			:reduce="reduce"
-			:plus="plus"
-			:shanchu="shanchu"
 			:showBorder="showBorder"
-			style="position:sticky;top:0px;z-index:1000"
+			style="position:sticky;top:0px;z-index:99"
 		/>
 		<centerContent :centerContentValue="centerContentValue" />
 		<recommendItem
@@ -133,6 +130,9 @@ export default {
 	},
 	mounted() {
 		window.addEventListener("scroll", this.handleScroll);
+		this.$bus.$on('reduce', this.reduce);
+		this.$bus.$on("plus",this.plus);
+		this.$bus.$on("shanchu",this.shanchu);
 	},
 	destroyed() {
 		window.removeEventListener("scroll", this.handleScroll);

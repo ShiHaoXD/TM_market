@@ -17,10 +17,7 @@
 			>
 				<shopCar
 					:buyItemValue="shopCarValue"
-					:reduce="reduce"
-					:plus="plus"
-					:shanchu="shanchu"
-                    style="position:relative;top:5px"
+					style="position:relative;top:5px"
 				/>
 			</div>
 		</div>
@@ -36,7 +33,7 @@ export default {
 	data() {
 		return {};
 	},
-	props: ["shopCarValue", "reduce", "plus", "shanchu","showBorder"],
+	props: ["shopCarValue", "showBorder"],
 	mounted() {},
 
 	methods: {},
@@ -52,7 +49,7 @@ export default {
 	display: flex;
 	width: 1190px;
 	margin: 0 auto;
-    background-color:white;
+	background-color: white;
 }
 .nav {
 	height: 42px;
